@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Terraform lists and loops"
-date:   2020-02-01 17:47:28 +0000
+date:   2020-02-05 14:45:00 +0000
 categories: terraform
 ---
 [Terraform][terraform] is a great tool. I like it because it takes all of the cloud providers I might want to use and gives me one common interface in code.
