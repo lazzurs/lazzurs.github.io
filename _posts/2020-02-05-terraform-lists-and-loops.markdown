@@ -17,7 +17,7 @@ Here I am creating an ECS cluster in an existing VPC with an existing subnet. Gi
 
 
     //This looks fine
-    data "aws_subnet_ids" "aotm_public_subnet_ids" {
+    data "aws_subnet_ids" "public_subnet_ids" {
       vpc_id = var.vpc_id
     
       tags = {
@@ -26,8 +26,8 @@ Here I am creating an ECS cluster in an existing VPC with an existing subnet. Gi
     }
 
     //Have to loop because it is a set and not a list returned by aws_subnet_ids
-    data "aws_subnet" "aotm_public_subnet" {
-      for_each = data.aws_subnet_ids.aotm_public_subnet_ids.ids
+    data "aws_subnet" "public_subnets" {
+      for_each = data.aws_subnet_ids.public_subnet_ids.ids
       id       = each.value
     }
 
@@ -46,7 +46,7 @@ Here I am creating an ECS cluster in an existing VPC with an existing subnet. Gi
           protocol    = "TCP"
           description = "HTTP"
           //WTFOMGPONIEZ
-          cidr_blocks = join(",",[for s in data.aws_subnet.aotm_public_subnet : s.cidr_block])
+          cidr_blocks = join(",",[for s in data.aws_subnet.public_subnets : s.cidr_block])
         }
       ]
     }
