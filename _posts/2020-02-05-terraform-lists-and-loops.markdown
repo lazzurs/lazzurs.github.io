@@ -51,7 +51,7 @@ Here I am creating an ECS cluster in an existing VPC with an existing subnet. Gi
       ]
     }
 
-Pulling the subnet IDs and then getting subnet objects from that makes sense to me. Where this all starts to fall down is using the set type in Terraform rather than a [list][terraform-list]. A [set][terraform-set] does make some sense as you never are going to have more than one of each subnet ID but there are far less options when it comes to what you can do with a set in comparison to a [list][terraform-list]. This leads to the loop inside the aws_subnet lookup which is fine but finally the module for security groups takes as an input a string of CIDR blocks with a comma between each one rather than a [list][terraform-list]. This is a mess of types where really lists would have been ideal all the way through.
+Pulling the subnet IDs and then getting subnet objects from that makes sense to me. Where this all starts to fall down is using the [set][terraform-set] type in Terraform rather than a [list][terraform-list]. A [set][terraform-set] does make some sense as you never are going to have more than one of each subnet ID but there are far less options when it comes to what you can do with a set in comparison to a [list][terraform-list]. This leads to the loop inside the aws_subnet lookup which is fine but finally the module for security groups takes as an input a string of CIDR blocks with a comma between each one rather than a [list][terraform-list]. This is a mess of types where really lists would have been ideal all the way through.
 
 Ah well, it works but I don't envy anyone having to do the same.
 
