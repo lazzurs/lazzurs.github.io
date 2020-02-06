@@ -6,7 +6,7 @@ categories: terraform
 ---
 Today I hit a problem with my [Terraform ECS module][terraform-ecs-module] where I needed a new ECS cluster to use a HTTP proxy in the network it was being deployed to. I am generally a fan of outgoing firewalls and in AWS since you will need services like ECS to access internet services having an HTTP proxy in the way of outgoing traffic is a great way of making your environment more secure.
 
-In doing this I had to add some further configuration to the instance user data. The module previously had this split as a switch but thanks to the lack of case statements in [Terraform][terraform] it make more sense to put the switch of EFS/HTTP proxy support in the template, it also makes it easier to combine EFS and HTTP proxy support.
+In doing this I had to add some further configuration to the instance user data and thankfully AWS had some great [documentation][aws-documentation] for this.. The module previously had this split as a switch but thanks to the lack of case statements in [Terraform][terraform] it make more sense to put the switch of EFS/HTTP proxy support in the template, it also makes it easier to combine EFS and HTTP proxy support.
 
 In doing so I needed to test the new template, I could have done this in the module but that would have required spinning up clusters just to test a file template. Instead I created a temporary directory with the template file and the following [Terraform][terraform]
 
@@ -59,3 +59,4 @@ Peace, love and happiness.
 
 [terraform]: https://www.terraform.io/
 [terraform-ecs-module]: https://registry.terraform.io/modules/lazzurs/ecs/aws/
+[aws-documentation]: https://aws.amazon.com/premiumsupport/knowledge-center/http-proxy-docker-ecs/
