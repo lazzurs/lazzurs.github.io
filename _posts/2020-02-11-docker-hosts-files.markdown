@@ -20,6 +20,18 @@ That gave me all of the entries I needed in Terraform to re-create the local hos
 
 To support all of this I had to make changes to my [ECS service module][terraform-ecs-service-module] to support the DNS search domains in the task definition.
 
+Update:
+
+I had some further fun with this.
+
+First off I missed adding DNS search domains does not work with awsvpc mode networking for a service. That is fine for this case I can switch the service back to using the bridged mode. Thankfully this then showed up an error in my module in the case of not using awsvpc mode where I had not specified the default value for the networking configuration for the task correctly and allowed me to fix this.
+
+However I then hit into this error.
+
+    Error: ClientException: DNS search domain hosts.bah.moo.woo.quack.fsck. contains invalid characters, does not match pattern ^[a-zA-Z0-9-.]{0,253}[a-zA-Z0-9]$
+
+Now you will notice at the end of the domain name there a . which is technically correct. AWS tends to provide the dot at the end of domains from Route 53 when querying the API and I have hit this before. Sadly ECS will not accept a domain with a dot at the end when specifying search domains. Being technically correct in one service and not in another is annoying.
+
 Peace, love and happiness.
 
 [ecs-task-definition]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html
