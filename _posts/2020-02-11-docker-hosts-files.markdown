@@ -24,4 +24,4 @@ Peace, love and happiness.
 
 [ecs-task-definition]: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html
 [jenkins]: https://jenkins.io/
-[terraform-ecs-servce-module]: https://registry.terraform.io/modules/lazzurs/ecs-service/aws/
+[terraform-ecs-service-module]: https://registry.terraform.io/modules/lazzurs/ecs-service/aws/
