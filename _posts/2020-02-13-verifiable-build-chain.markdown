@@ -25,7 +25,7 @@ matter in the food industry where this would usually be referred to by terms lik
 process food goes through from the seed and soil to get to your plate and as much as what food you eat will change 
 your system the same is true of the software you consume.
 
-To fix this I created a [pull request][homebrew-core-pr] for [Homebrew][homebrew core] which was accepted this morning.
+To fix this I created a [pull request][homebrew-core-pr] for [Homebrew][homebrew] which was accepted this morning.
 I have archived my [homebrew cask tap][awscli-cask-tap] so that other people can see it and fork it if they would 
 rather use the distribution from AWS.
 
