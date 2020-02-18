@@ -26,7 +26,7 @@ AMIs to then be used in auto-scaling groups.
 As I mentioned at the start this is a fairly standard task in any new user of cloud providers as they will want a base
 image that meets their own needs and security requirements and maybe sets things up to follow their standard deployment
 pattern. I use [Packer][packer] for this every time as it allows re-using the existing configuration management code
-they have and means we can apply the same work to their [Vagrant], [Docker] or multiple cloud provider images in the
+they have and means we can apply the same work to their [Vagrant][vagrant], [Docker][docker] or multiple cloud provider images in the
 same way.
 
 Peace, love and happiness.
@@ -41,3 +41,5 @@ Peace, love and happiness.
 [packer-builders]: https://packer.io/docs/builders/index.html
 [packer-provisioners]: https://packer.io/docs/provisioners/index.html
 [packer-post-processors]: https://packer.io/docs/post-processors/index.html
+[vagrant]: https://www.vagrantup.com/
+[docker]: https://www.docker.com/
