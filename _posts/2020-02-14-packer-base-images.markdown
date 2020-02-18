@@ -43,3 +43,4 @@ Peace, love and happiness.
 [packer-post-processors]: https://packer.io/docs/post-processors/index.html
 [vagrant]: https://www.vagrantup.com/
 [docker]: https://www.docker.com/
+[packer-aws-ebs]: https://packer.io/docs/builders/amazon-ebs.html
