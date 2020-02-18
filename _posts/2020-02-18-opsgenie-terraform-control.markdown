@@ -44,3 +44,4 @@ Peace, love and happiness.
 [terraform-opsgenie-user-resource]: https://www.terraform.io/docs/providers/opsgenie/r/user.html
 [opsgenie-user-api]: https://docs.opsgenie.com/docs/user-api#section-get-user
 [opsgenie-api]: https://docs.opsgenie.com/docs/api-overview
+[terraform]: https://www.terraform.io/
