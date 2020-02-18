@@ -9,7 +9,7 @@ Today I have been busy working on a fairly typical task when starting in a new p
 [Packer][packer] is a great tool for building images for a bunch of providers including in my case [AWS][packer-aws] but
  I have used it in the past for [Azure][packer-azure], [GCP][packer-gcp], [VMWare][packer-vmware],
  [Vagrant][packer-vagrant], [Docker][packer-docker] and others. This really shows the power of this tool to create
- consistent base images no matter what technology you are using for your compute or what you want to use next.00
+ consistent base images no matter what technology you are using for your compute or what you want to use next.
 
 Packer has a concept of [builders][packer-builders] where you can build in a specific way depending on the compute
 technology you are using. There is then [provisioners][packer-provisioners] which allow you to configure that image
