@@ -8,7 +8,7 @@ Today I have started working on the first application [Packer][packer] image. Th
 [Packer][packer] that is configured with all of the security hardening and any other custom configuration we need in
 all of our images that I wrote about [here][packer-base-image-post] and then build on this image for each application.
 
-The application will be built via CI ([Jenkins][jenkins] in our case) and then once the application is built it will be
+The application will be built via CI, [Jenkins][jenkins] in our case, and then once the application is built it will be
 packaged into an AMI via [Packer][packer]. This AMI can then be used in the autoscaling groups to automatically spin up
 the image.
 
