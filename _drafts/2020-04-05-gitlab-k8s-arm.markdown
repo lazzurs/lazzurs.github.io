@@ -24,3 +24,4 @@ Peace, love and happiness.
 [kpt]: https://googlecontainertools.github.io/kpt/
 [nextcloud]: https://nextcloud.com/
 [gitlab]: https://about.gitlab.com/
+[gitlab-helm-image-issue]: https://gitlab.com/gitlab-org/cluster-integration/helm-install-image/-/issues/6
