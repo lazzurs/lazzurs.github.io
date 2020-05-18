@@ -8,8 +8,8 @@ One of my projects at home is a small [Kubernetes][kubernetes] cluster. I decide
 been using [Kubernetes][kubernetes] at work but in my current position they are not using it and I want to keep my
 [Kubernetes][kubernetes] knowledge current. A great example of why this is relevant is the recent release of [Kpt][kpt].
 
-At home I already have a few systems running services like [Nextcloud][nextcloud] and [Gitlab][gitlab]. Since
-[gitlab][gitlab] can integrate nicely with [Kubernetes][kubernetes] at least in theory. The first step in this
+At home I already have a few systems running services like [Nextcloud][nextcloud] and [Gitlab][gitlab].
+[Gitlab][gitlab] can integrate nicely with [Kubernetes][kubernetes], at least in theory. The first step in this
 integration is [Gitlab][gitlab] installing [Helm][helm] on the cluster. Instantly this failed and I figured documenting
 the failure and how I figured out what was wrong would be useful. In the below image is the error I got back from
 [Gitlab][gitlab].
