@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Terraform self signed certs"
-date:   2020-02-01 17:47:28 +0000
+date:   2020-10-25 14:19:28 +0000
 categories: terraform tls certificates
 ---
 Today I am solving the problem of setting up a mutual TLS gateway to replace a VPN. As part of this I have to do some 
